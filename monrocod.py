@@ -22,10 +22,12 @@ bluemix = Image.blend (blue_cropped_1, blue_cropped_2 , 0.5)
 green_coordinates_1 = (100, 0, green.width-100, green.height) 
 green_cropped_1 = green.crop (green_coordinates_1)
 
-result= Image.merge ("RGB" , ( red , green , blue  ))
+result= Image.merge ("RGB" , ( redmix , green_cropped_1 , bluemix  ))
 
-image.thumbnail ((80, 80))
-image.save ("smallfinalmonroo.jpg")
+result.thumbnail ((80, 80))
+result.save ("smallfinalmonroo.jpg")
+
+
 
 
 
